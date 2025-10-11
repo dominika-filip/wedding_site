@@ -1,0 +1,69 @@
+<section id="rsvp" class="p-8 bg-white rounded-2xl shadow-lg max-w-md mx-auto">
+  <h2 class="text-2xl font-semibold mb-4 text-center">Potwierdź obecność</h2>
+
+  <form id="rsvpForm" class="space-y-4">
+    <input type="text" name="name" placeholder="Imię i nazwisko" required class="w-full border p-2 rounded">
+
+    <input type="number" name="guests" placeholder="Ilość gości" min="0" required class="w-full border p-2 rounded">
+
+    <select name="attendance" required class="w-full border p-2 rounded">
+      <option value="">Czy będziesz obecny/a?</option>
+      <option value="Tak">Tak</option>
+      <option value="Nie">Nie</option>
+    </select>
+
+    <textarea name="diet" placeholder="Informacje o diecie (np. wegetarianin, alergie...)" class="w-full border p-2 rounded"></textarea>
+
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" name="accommodation" value="Tak" class="h-4 w-4">
+      <span>Potrzebuję noclegu</span>
+    </label>
+
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" name="bus" value="Tak" class="h-4 w-4">
+      <span>Skorzystam z zorganizowanego autokaru</span>
+    </label>
+
+    <button type="submit" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">
+      Wyślij
+    </button>
+  </form>
+
+  <p id="rsvpMessage" class="text-center mt-4 text-sm"></p>
+</section>
+
+<script>
+  const form = document.getElementById('rsvpForm');
+  const msg = document.getElementById('rsvpMessage');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.textContent = "Wysyłanie...";
+
+    // Checkboxy - konwersja na "Tak"/"Nie"
+    const formData = new FormData(form);
+    formData.set("accommodation", form.accommodation.checked ? "Tak" : "Nie");
+    formData.set("bus", form.bus.checked ? "Tak" : "Nie");
+
+    const data = Object.fromEntries(formData);
+
+    try {
+      const res = await fetch("https://script.google.com/u/0/home/projects/1Ol869OTAfVMv3SuV0VOt0bCJzJpgFPNWLTI-4qhxxbebZwDPZ2vDGgAY/edit", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+      });
+      const json = await res.json();
+
+      if (json.result === "success") {
+        msg.textContent = "Dziękujemy! Twoja odpowiedź została zapisana 💌";
+        form.reset();
+      } else {
+        msg.textContent = "Wystąpił błąd — spróbuj ponownie.";
+      }
+    } catch (err) {
+      msg.textContent = "Błąd połączenia 😔";
+      console.error(err);
+    }
+  });
+</script>
