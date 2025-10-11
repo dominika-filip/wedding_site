@@ -8,6 +8,7 @@
   <!-- Google Fonts (internet) -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <!-- ====== NAV ====== -->
@@ -163,7 +164,7 @@
       const data = Object.fromEntries(formData);
 
       try {
-      const res = await fetch("https://script.google.com/u/0/home/projects/1Ol869OTAfVMv3SuV0VOt0bCJzJpgFPNWLTI-4qhxxbebZwDPZ2vDGgAY/edit", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbwauq-Hs1NItotCpCaMOCLa1ymBqUoo2aHerudY2agiWGGRUvQAOg2DRJ9j664XMpwWLw/exec", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
@@ -182,4 +183,12 @@
     }
   });
 </script>
+</main>
+
+  <footer class="footer">
+    <p>Dominika & Filip © 2026 — Dziękujemy, że jesteś z nami.</p>
+  </footer>
+</body>
+</html>
+
 
