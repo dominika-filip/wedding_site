@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nasze Wesele — Anna & Piotr</title>
+  <meta name="description" content="Zaproszenie i informacje ślubno-weselne.">
+  <!-- Google Fonts (internet) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ====== NAV ====== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#">Anna & Piotr</a>
+      <ul class="menu">
+        <li><a href="#info">Informacje</a></li>
+        <li><a href="#plan">Plan dnia</a></li>
+        <li><a href="#lokalizacja">Lokalizacja</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero" id="top">
+    <!-- EDYTUJ: Zmień imiona i datę poniżej -->
+    <h1 class="names">Anna & Piotr</h1>
+    <p class="date">14 czerwca 2025</p>
+    <p class="hero-sub">Zapraszamy na nasz ślub i przyjęcie</p>
+  </header>
+
+  <main>
+    <!-- ====== INFO ====== -->
+    <section id="info" class="section info">
+      <h2>Informacje</h2>
+      <!-- EDYTUJ: tutaj wpisz dokładne miejsca i godziny -->
+      <div class="info-block">
+        <h3>Uroczystość</h3>
+        <p><strong>Miejsce:</strong> Kościół św. Jana, ul. Przykładowa 1, Warszawa</p>
+        <p><strong>Godzina:</strong> 15:00</p>
+      </div>
+
+      <div class="info-block">
+        <h3>Przyjęcie weselne</h3>
+        <p><strong>Miejsce:</strong> Sala Bankietowa „Diament”, ul. Przyjęciowa 5</p>
+        <p><strong>Godzina:</strong> 18:00</p>
+      </div>
+    </section>
+
+    <!-- ====== COUPLE PHOTO ====== -->
+    <section class="section couple" aria-label="Para młoda">
+      <h2>My</h2>
+      <!-- Podmień plik images/couple.svg na swoje zdjęcie o tej samej nazwie -->
+      <img src="images/couple.svg" alt="Zdjęcie pary młodej" class="couple-img">
+      <p class="couple-caption">Tu możesz wstawić krótką dedykację lub opis.</p>
+    </section>
+
+    <!-- ====== PLAN DNIA ====== -->
+    <section id="plan" class="section timeline">
+      <h2>Plan dnia</h2>
+      <ul>
+        <!-- EDYTUJ: dopasuj czasy do swojego planu -->
+        <li><strong>15:00</strong> — Uroczystość ślubna</li>
+        <li><strong>17:00</strong> — Sesja zdjęciowa</li>
+        <li><strong>18:00</strong> — Przyjęcie weselne</li>
+        <li><strong>22:00</strong> — Tort</li>
+        <li><strong>00:00</strong> — Oczepiny</li>
+      </ul>
+    </section>
+
+    <!-- ====== LOKALIZACJA ====== -->
+    <section id="lokalizacja" class="section location">
+      <h2>Lokalizacja</h2>
+      <p>Adresy powyżej. Jeśli chcesz, wklej tutaj kod z Google Maps (iframe). Poniżej przykład miejsca:</p>
+      <address>
+        Kościół św. Jana<br>
+        ul. Przykładowa 1, 00-001 Warszawa
+      </address>
+      <!-- Aby dodać mapę: w Google Maps -> Udostępnij -> Osadź mapę -> wklej iframe tutaj -->
+    </section>
+
+    <!-- ====== GALERIA ====== -->
+    <section id="galeria" class="section gallery">
+      <h2>Galeria</h2>
+      <p>Zdjęcia po imprezie — podmień pliki w folderze <code>/images</code>.</p>
+      <div class="gallery-grid" id="galleryGrid">
+        <img src="images/gallery1.svg" alt="Galeria 1" class="gallery-item">
+        <img src="images/gallery2.svg" alt="Galeria 2" class="gallery-item">
+        <img src="images/gallery3.svg" alt="Galeria 3" class="gallery-item">
+      </div>
+    </section>
+
+    <!-- ====== RSVP ====== -->
+    <section id="rsvp" class="section rsvp">
+      <h2>Potwierdź obecność (RSVP)</h2>
+      <form id="rsvpForm" class="rsvp-form">
+        <label>
+          Imię i nazwisko
+          <input type="text" name="name" placeholder="Twoje imię" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="Twój email" required>
+        </label>
+        <label>
+          Liczba osób
+          <input type="number" name="guests" min="1" max="10" value="1" required>
+        </label>
+        <label>
+          Wiadomość (opcjonalnie)
+          <textarea name="message" rows="3" placeholder="Np. informacje o diecie"></textarea>
+        </label>
+        <button type="submit" class="btn">Wyślij</button>
+      </form>
+      <p class="note">Na start formularz wyświetla powiadomienie w przeglądarce. Możemy go później podłączyć do emaila lub Google Forms.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Anna & Piotr © 2025 — Dziękujemy, że jesteś z nami.</p>
+  </footer>
+
+  <!-- Modal lightbox for gallery -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button id="lbClose" class="lb-close" aria-label="Zamknij">✕</button>
+      <img id="lbImg" src="" alt="">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
