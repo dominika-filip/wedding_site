@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dominika & Filip – Ślub 15.08.2026</title>
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Opis (np. do Messengera / WhatsAppa) -->
+  <meta name="description" content="Zaproszenie na ślub Dominiki i Filipa – 15 sierpnia 2026">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #f4f1ea;
+      font-family: Arial, sans-serif;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 100vh;
+    }
+
+    embed {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Fallback gdy PDF się nie załaduje */
+    .fallback {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .pdf-container {
+        height: 100svh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pdf-container">
+    <embed src="zaproszenie.pdf" type="application/pdf">
+  </div>
+
+  <div class="fallback">
+    <p>Jeśli dokument się nie wyświetla, możesz pobrać zaproszenie:</p>
+    <p><a href="zaproszenie.pdf">Pobierz PDF</a></p>
+  </div>
+
+</body>
+</html>
