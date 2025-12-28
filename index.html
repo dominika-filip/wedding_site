@@ -52,25 +52,12 @@
       margin-top: 0;
     }
 
-    /* BLOKI */
+    /* TREŚĆ */
     .block {
       background-color: var(--bg-light);
       padding: 28px;
       border-radius: 14px;
       margin-bottom: 36px;
-    }
-
-    .image-block {
-      background-color: var(--white);
-      padding: 24px;
-      border-radius: 14px;
-      margin-bottom: 36px;
-      text-align: center;
-    }
-
-    .image-block img {
-      width: 100%;
-      border-radius: 12px;
     }
 
     .highlight {
@@ -91,6 +78,31 @@
       border-radius: 6px;
     }
 
+    /* IMAGE BLOCK – dopasowane jak w Canvie */
+    .image-block {
+      background-color: transparent;
+      margin: 32px 0;
+      text-align: center;
+    }
+
+    .image-block img {
+      max-width: 520px;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    /* Zdjęcie główne */
+    .image-block.hero img {
+      max-width: 620px;
+    }
+
+    /* Zdjęcie końcowe */
+    .image-block.end img {
+      max-width: 480px;
+    }
+
     footer {
       text-align: center;
       color: white;
@@ -102,6 +114,10 @@
       h1 {
         font-size: 2.2rem;
       }
+
+      .image-block img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -111,7 +127,7 @@
 <div class="container">
 
   <!-- HERO -->
-  <div class="image-block">
+  <div class="image-block hero">
     <img src="first.jpg" alt="Dominika i Filip">
     <h1>Dominika & Filip</h1>
     <p><strong>15 sierpnia 2026</strong></p>
@@ -129,7 +145,7 @@
   </div>
 
   <div class="image-block">
-    <img src="kosciol.png" alt="Kościół">
+    <img src="kosciol.jpg" alt="Kościół">
   </div>
 
   <!-- WESELE -->
@@ -168,7 +184,7 @@
   </div>
 
   <!-- KONTAKT + ZDJĘCIE -->
-  <div class="image-block">
+  <div class="image-block end">
     <img src="cheers.jpg" alt="Cheers">
     <div class="highlight" style="margin-top:24px;">
       Dominika: <a href="tel:+48696062371" style="color:white;">696&nbsp;062&nbsp;371</a><br>
