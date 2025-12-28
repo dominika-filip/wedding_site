@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Informacje dotyczące ślubu Dominiki i Filipa – 15 sierpnia 2026">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f4f1ea;
-      --green: #7c8a6a;
-      --dark: #2f2f2f;
-      --accent: #b54b4b;
+      --bg-main: #7b7f5f;
+      --bg-light: #e7d7c0;
+      --accent: #730f0f;
+      --text-dark: #2b2b2b;
+      --white: #ffffff;
     }
 
     * {
@@ -20,82 +26,103 @@
 
     body {
       margin: 0;
-      font-family: "Georgia", serif;
-      background-color: var(--bg);
-      color: var(--dark);
+      font-family: "Lora", serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
     .container {
-      max-width: 820px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 32px 20px 60px;
     }
 
-    header {
+    /* HERO */
+    .hero {
+      background-color: var(--white);
+      padding: 32px;
+      border-radius: 16px;
       text-align: center;
       margin-bottom: 48px;
     }
 
-    header h1 {
-      font-size: 2.6rem;
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem;
       margin: 0;
     }
 
-    header p {
-      font-size: 1.2rem;
+    .date {
+      font-size: 1.3rem;
       margin-top: 8px;
     }
 
+    /* SEKCJE */
     section {
-      margin-bottom: 40px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    section:last-child {
-      border-bottom: none;
+      background-color: var(--bg-light);
+      padding: 28px;
+      border-radius: 14px;
+      margin-bottom: 32px;
     }
 
     h2 {
+      font-family: "Playfair Display", serif;
       font-size: 1.6rem;
-      margin-bottom: 12px;
-      color: var(--green);
+      color: var(--accent);
+      margin-top: 0;
     }
 
-    ul {
-      padding-left: 20px;
+    .highlight-box {
+      background-color: var(--accent);
+      color: white;
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 16px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 14px;
       padding: 12px 20px;
-      background-color: var(--green);
+      background-color: var(--accent);
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-size: 1rem;
     }
 
-    .button.secondary {
-      background-color: var(--accent);
+    /* GALERIA */
+    .gallery {
+      background-color: var(--white);
+      padding: 24px;
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
     }
 
     footer {
       text-align: center;
-      font-size: 0.95rem;
-      color: #555;
+      color: white;
       margin-top: 40px;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
+      h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -105,86 +132,82 @@
 
   <div class="container">
 
-    <header>
+    <!-- HERO -->
+    <div class="hero">
+      <!-- ZMIEŃ NA SWOJE ZDJĘCIE -->
+      <img src="hero.jpg" alt="Dominika i Filip">
       <h1>Dominika & Filip</h1>
-      <p>Zapraszamy Cię na nasz ślub<br><strong>15 sierpnia 2026</strong></p>
-    </header>
+      <div class="date">15 sierpnia 2026</div>
+    </div>
 
     <section>
-      <h2>📍 Ceremonia</h2>
-      <p>
-        Kościół pw. <strong>św. Anny w Pomiechowie</strong><br>
-        15 sierpnia 2026
-      </p>
+      <h2>Ceremonia</h2>
+      <div class="highlight-box">
+        Kościół pw. św. Anny w Pomiechowie
+      </div>
       <a class="button" href="https://www.google.com/maps/search/Kościół+św.+Anny+Pomiechowo" target="_blank">
         Otwórz mapę
       </a>
     </section>
 
     <section>
-      <h2>🥂 Przyjęcie weselne</h2>
-      <p>
-        <strong>Zacisze w Pomiechówku</strong>
-      </p>
+      <h2>Przyjęcie weselne</h2>
+      <div class="highlight-box">
+        Zacisze w Pomiechówku
+      </div>
       <a class="button" href="https://www.google.com/maps/search/Zacisze+Pomiechówek" target="_blank">
         Otwórz mapę
       </a>
     </section>
 
     <section>
-      <h2>🚌 Dojazd i powrót</h2>
-      <p>
-        Autokar zawiezie gości z Warszawy na miejsce ślubu i wesela,
-        a po przyjęciu (około 4:00) odwiezie z powrotem do Warszawy.
-      </p>
-    </section>
-
-    <section>
-      <h2>🍽 Menu</h2>
-      <p>Dostępne opcje:</p>
-      <ul>
-        <li>wegetariańskie</li>
-        <li>mięsne</li>
-        <li>bezglutenowe</li>
-      </ul>
-      <p>
-        Wybór menu oraz informację o przejeździe autokarem
-        prosimy zaznaczyć w formularzu poniżej.
-      </p>
-    </section>
-
-    <section>
-      <h2>📝 Potwierdzenie obecności (RSVP)</h2>
-      <p>
+      <h2>Potwierdzenie obecności</h2>
+      <div class="highlight-box">
         Prosimy o potwierdzenie obecności do końca czerwca 2026 r.
-        poprzez formularz Google lub telefonicznie.
-      </p>
-      <a class="button secondary" href="https://docs.google.com/spreadsheets/d/1h2F8AZ0z5kez6wiC-24pk6jNbW5cjBRiCwZIzKvvrdo/edit?gid=0#gid=0" target="_blank">
-        Przejdź do formularza
+      </div>
+      <a class="button" href="LINK_DO_GOOGLE_FORMS" target="_blank">
+        Formularz RSVP
       </a>
     </section>
 
     <section>
-      <h2>📸 Zdjęcia</h2>
+      <h2>Menu i dojazd</h2>
       <p>
-        Zdjęcia ze ślubu i wesela zostaną w przyszłości udostępnione
-        na dysku w chmurze.
-      </p>
-      <p>
-        Gdy tylko będą gotowe, w tym miejscu pojawi się link.
+        W formularzu RSVP prosimy o informację:
+        <ul>
+          <li>czy skorzystacie z autokaru</li>
+          <li>czy wybieracie dietę wegetariańską, wegańską lub bezglutenową</li>
+        </ul>
       </p>
     </section>
 
     <section>
-      <h2>📞 Kontakt</h2>
+      <h2>My</h2>
+      <div class="gallery">
+        <!-- ZMIEŃ NA SWOJE ZDJĘCIA -->
+        <img src="photo1.jpg" alt="">
+        <img src="photo2.jpg" alt="">
+      </div>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <div class="highlight-box">
+        Dominika: <a href="tel:+48696062371" style="color:white;">696&nbsp;062&nbsp;371</a><br>
+        Filip: <a href="tel:+48721898198" style="color:white;">721&nbsp;898&nbsp;198</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Zdjęcia po ślubie</h2>
       <p>
-        Dominika: <a href="tel:+48696062371">696&nbsp;062&nbsp;371</a><br>
-        Filip: <a href="tel:+48721898198">721&nbsp;898&nbsp;198</a>
+        Zdjęcia ze ślubu i wesela zostaną w przyszłości udostępnione
+        na dysku w chmurze. Gdy będą gotowe, w tym miejscu pojawi się link.
       </p>
     </section>
 
     <footer>
-      Cieszymy się, że będziecie z nami w tym wyjątkowym dniu ❤️
+      Cieszymy się, że będziecie z nami 🤍
     </footer>
 
   </div>
