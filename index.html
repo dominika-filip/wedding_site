@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Dominika & Filip – Ślub 15.08.2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Informacje dotyczące ślubu Dominiki i Filipa – 15 sierpnia 2026">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +15,8 @@
       --bg-main: #7b7f5f;
       --bg-light: #e7d7c0;
       --accent: #730f0f;
-      --text-dark: #2b2b2b;
       --white: #ffffff;
+      --text-dark: #2b2b2b;
     }
 
     * {
@@ -38,79 +37,58 @@
       padding: 32px 20px 60px;
     }
 
-    /* HERO */
-    .hero {
-      background-color: var(--white);
-      padding: 32px;
-      border-radius: 16px;
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .hero img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 24px;
+    h1, h2 {
+      font-family: "Playfair Display", serif;
     }
 
     h1 {
-      font-family: "Playfair Display", serif;
       font-size: 2.8rem;
       margin: 0;
     }
 
-    .date {
-      font-size: 1.3rem;
-      margin-top: 8px;
-    }
-
-    /* SEKCJE */
-    section {
-      background-color: var(--bg-light);
-      padding: 28px;
-      border-radius: 14px;
-      margin-bottom: 32px;
-    }
-
     h2 {
-      font-family: "Playfair Display", serif;
       font-size: 1.6rem;
       color: var(--accent);
       margin-top: 0;
     }
 
-    .highlight-box {
+    /* BLOKI */
+    .block {
+      background-color: var(--bg-light);
+      padding: 28px;
+      border-radius: 14px;
+      margin-bottom: 36px;
+    }
+
+    .image-block {
+      background-color: var(--white);
+      padding: 24px;
+      border-radius: 14px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .image-block img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .highlight {
       background-color: var(--accent);
       color: white;
       padding: 16px;
       border-radius: 10px;
-      margin-top: 16px;
+      margin: 16px 0;
     }
 
     .button {
       display: inline-block;
-      margin-top: 14px;
+      margin-top: 12px;
       padding: 12px 20px;
       background-color: var(--accent);
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    /* GALERIA */
-    .gallery {
-      background-color: var(--white);
-      padding: 24px;
-      border-radius: 14px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
     }
 
     footer {
@@ -130,87 +108,79 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-      <!-- ZMIEŃ NA SWOJE ZDJĘCIE -->
-      <img src="hero.jpg" alt="Dominika i Filip">
-      <h1>Dominika & Filip</h1>
-      <div class="date">15 sierpnia 2026</div>
-    </div>
-
-    <section>
-      <h2>Ceremonia</h2>
-      <div class="highlight-box">
-        Kościół pw. św. Anny w Pomiechowie
-      </div>
-      <a class="button" href="https://www.google.com/maps/search/Kościół+św.+Anny+Pomiechowo" target="_blank">
-        Otwórz mapę
-      </a>
-    </section>
-
-    <section>
-      <h2>Przyjęcie weselne</h2>
-      <div class="highlight-box">
-        Zacisze w Pomiechówku
-      </div>
-      <a class="button" href="https://www.google.com/maps/search/Zacisze+Pomiechówek" target="_blank">
-        Otwórz mapę
-      </a>
-    </section>
-
-    <section>
-      <h2>Potwierdzenie obecności</h2>
-      <div class="highlight-box">
-        Prosimy o potwierdzenie obecności do końca czerwca 2026 r.
-      </div>
-      <a class="button" href="LINK_DO_GOOGLE_FORMS" target="_blank">
-        Formularz RSVP
-      </a>
-    </section>
-
-    <section>
-      <h2>Menu i dojazd</h2>
-      <p>
-        W formularzu RSVP prosimy o informację:
-        <ul>
-          <li>czy skorzystacie z autokaru</li>
-          <li>czy wybieracie dietę wegetariańską, wegańską lub bezglutenową</li>
-        </ul>
-      </p>
-    </section>
-
-    <section>
-      <h2>My</h2>
-      <div class="gallery">
-        <!-- ZMIEŃ NA SWOJE ZDJĘCIA -->
-        <img src="photo1.jpg" alt="">
-        <img src="photo2.jpg" alt="">
-      </div>
-    </section>
-
-    <section>
-      <h2>Kontakt</h2>
-      <div class="highlight-box">
-        Dominika: <a href="tel:+48696062371" style="color:white;">696&nbsp;062&nbsp;371</a><br>
-        Filip: <a href="tel:+48721898198" style="color:white;">721&nbsp;898&nbsp;198</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Zdjęcia po ślubie</h2>
-      <p>
-        Zdjęcia ze ślubu i wesela zostaną w przyszłości udostępnione
-        na dysku w chmurze. Gdy będą gotowe, w tym miejscu pojawi się link.
-      </p>
-    </section>
-
-    <footer>
-      Cieszymy się, że będziecie z nami 🤍
-    </footer>
-
+  <!-- HERO -->
+  <div class="image-block">
+    <img src="first.jpg" alt="Dominika i Filip">
+    <h1>Dominika & Filip</h1>
+    <p><strong>15 sierpnia 2026</strong></p>
   </div>
+
+  <!-- CEREMONIA -->
+  <div class="block">
+    <h2>Ceremonia</h2>
+    <div class="highlight">
+      Kościół pw. św. Anny w Pomiechowie
+    </div>
+    <a class="button" href="https://www.google.com/maps/search/Kościół+św.+Anny+Pomiechowo" target="_blank">
+      Otwórz mapę
+    </a>
+  </div>
+
+  <div class="image-block">
+    <img src="kosciol.png" alt="Kościół">
+  </div>
+
+  <!-- WESELE -->
+  <div class="block">
+    <h2>Przyjęcie weselne</h2>
+    <div class="highlight">
+      Zacisze w Pomiechówku
+    </div>
+    <a class="button" href="https://www.google.com/maps/search/Zacisze+Pomiechówek" target="_blank">
+      Otwórz mapę
+    </a>
+  </div>
+
+  <div class="image-block">
+    <img src="zacisze.jpg" alt="Zacisze">
+  </div>
+
+  <!-- HISTORIA -->
+  <div class="image-block">
+    <img src="milano.jpg" alt="Mediolan">
+  </div>
+
+  <div class="image-block">
+    <img src="proposal.jpg" alt="Zaręczyny">
+  </div>
+
+  <!-- RSVP -->
+  <div class="block">
+    <h2>Potwierdzenie obecności</h2>
+    <div class="highlight">
+      Prosimy o potwierdzenie obecności do końca czerwca 2026 r.
+    </div>
+    <a class="button" href="LINK_DO_GOOGLE_FORMS" target="_blank">
+      Formularz RSVP
+    </a>
+  </div>
+
+  <!-- KONTAKT + ZDJĘCIE -->
+  <div class="image-block">
+    <img src="cheers.jpg" alt="Cheers">
+    <div class="highlight" style="margin-top:24px;">
+      Dominika: <a href="tel:+48696062371" style="color:white;">696&nbsp;062&nbsp;371</a><br>
+      Filip: <a href="tel:+48721898198" style="color:white;">721&nbsp;898&nbsp;198</a>
+    </div>
+  </div>
+
+  <footer>
+    Zdjęcia ze ślubu i wesela zostaną udostępnione po uroczystości 🤍
+  </footer>
+
+</div>
 
 </body>
 </html>
